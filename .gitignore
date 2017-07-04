@@ -66,3 +66,4 @@ pickle-email-*.html
 # Environment files that may contain sensitive data
 .env
 .powenv
+/db/seeds.rd

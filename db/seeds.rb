@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+(0..20).each do |i|
+  Professor.create!(nome: Faker::Name.name, endereco: Faker::Name.name, telefone: Faker::PhoneNumber.phone_number )
+end
