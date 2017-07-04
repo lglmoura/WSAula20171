@@ -78,6 +78,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'html2haml'
+  gem "erb2haml"
   gem 'rails_layout'
   gem 'rails_apps_pages'
   gem "rails_apps_testing"
