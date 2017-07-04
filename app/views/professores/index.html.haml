@@ -1,0 +1,25 @@
+%h1 Listing professores
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Endereco
+      %th Telefone
+      %th
+      %th
+      %th
+
+  %tbody
+    - @professores.each do |professor|
+      %tr
+        %td= professor.nome
+        %td= professor.endereco
+        %td= professor.telefone
+        %td= link_to 'Show', professor
+        %td= link_to 'Edit', edit_professor_path(professor)
+        %td= link_to 'Excluir', professor, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Professor', new_professor_path
