@@ -27,5 +27,11 @@ module Aula20171
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators do |g|
+        g.view_specs false
+        g.helper_specs false
+        g.controller_spec false
+        g.model_spec false
+    end
   end
 end
