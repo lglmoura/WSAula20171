@@ -1,0 +1,31 @@
+%h1 Listing alunos
+
+%table
+  %thead
+    %tr
+      %th Matricula
+      %th Nome
+      %th Endereco
+      %th Email
+      %th Tefefone
+      %th Disciplina
+      %th
+      %th
+      %th
+
+  %tbody
+    - @alunos.each do |aluno|
+      %tr
+        %td= aluno.matricula
+        %td= aluno.nome
+        %td= aluno.endereco
+        %td= aluno.email
+        %td= aluno.tefefone
+        %td= aluno.disciplina.nome
+        %td= link_to 'Show', aluno
+        %td= link_to 'Edit', edit_aluno_path(aluno)
+        %td= link_to 'Excluir', aluno, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Aluno', new_aluno_path

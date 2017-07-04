@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Matricula:
+  = @aluno.matricula
+%p
+  %b Nome:
+  = @aluno.nome
+%p
+  %b Endereço:
+  = @aluno.endereco
+%p
+  %b Email:
+  = @aluno.email
+%p
+  %b Tefefone:
+  = @aluno.tefefone
+%p
+  %b Disciplina:
+  = @aluno.disciplina.nome
+
+= link_to 'Edit', edit_aluno_path(@aluno)
+\|
+= link_to 'Back', alunos_path
