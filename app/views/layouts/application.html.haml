@@ -1,10 +1,20 @@
 !!!
 %html
   %head
+    %meta{:name=>"description", :content=>"Ws Aula 2017 description"}
+    %meta{:name=>"keywords", :content=>"Aula keywords"}
+    %meta{:name=>"author", :content=>"Luiz Gustavo"}
+    %meta{:property=>"og:type", :content=>"website"}
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Aula20171
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header
+      = render 'layouts/header'
+    %main{:role => "main"}
+
+      = yield
+    %footer
+      = render 'layouts/footer'
